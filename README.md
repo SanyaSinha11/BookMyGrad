@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Creative Hub - A Freelancing Platform
 
-## Getting Started
+## Overview
+Creative Hub is a modern, user-centric freelancing platform tailored to bridge the gap between clients seeking high-quality creative and technical services, and freelancers eager to showcase their talents and earn independently.
 
-First, run the development server:
+Creative Hub offers a dynamic digital marketplace where clients—individuals or businesses—can discover, connect with, and hire freelancers across a wide range of categories such as Graphic Designing, Web Development, UI/UX Design, Writing & Translation, Video Editing, Photography, Audio & Music Production, 3D & CAD, and many more.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
+- **Frontend**: NextJS, JavaScript
+- **Backend**: FastAPI, Python
+- **Database**: SQLite
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Requirements
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Backend Dependencies
+- `fastapi`: FastAPI framework for building APIs.
+- `uvicorn`: ASGI server to run the FastAPI application.
+- `sqlalchemy`: SQL toolkit and Object-Relational Mapping (ORM) for Python.
+- `databases`: Async database support for SQLAlchemy.
+- `passlib[bcrypt]`: Password hashing with bcrypt.
+- `pydantic[email]`: Data validation and settings management with email support.
+- `python-multipart`: Support for multipart/form-data requests.
+- `python-jose`: JSON Object Signing and Encryption for JWT support.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Frontend Dependency
+- `nextjs`: React framework for server-side rendering and static site generation.
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+### Backend Setup
+1. Ensure you have Python 3.8+ installed.
+2. Create a virtual environment and activate it:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use venv\Scripts\activate
+   ```
+3. Install the required Python packages:
+   ```bash
+   pip install fastapi uvicorn sqlalchemy databases passlib[bcrypt] pydantic[email] python-multipart python-jose
+   ```
+4. Set up the SQLite database (configure as per your project structure).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Frontend Setup
+1. Ensure you have Node.js and npm installed.
+2. Navigate to the frontend directory and install dependencies:
+   ```bash
+   cd frontend
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Running the Project
 
-## Deploy on Vercel
+### Backend
+1. Activate the virtual environment (if not already activated):
+   ```bash
+   source venv/bin/activate  # On Windows use venv\Scripts\activate
+   ```
+2. Run the FastAPI application using uvicorn:
+   ```bash
+   uvicorn main:app --reload --host 0.0.0.0 --port 8000
+   ```
+- Replace `main` with your main FastAPI file name if different.
+- Access the API at `http://localhost:8000`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Frontend
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+   ```
+2. Start the NextJS development server:
+   ```bash
+   npm run dev
+   ```
+- Access the application at `http://localhost:3000`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Copyright and Author
+© 2025 Mohammad Wasi and Sanya Sinha
